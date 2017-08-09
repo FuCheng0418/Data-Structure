@@ -1,5 +1,12 @@
 package com.xxfc.link;
 
+/**
+ * 連結的節點
+ * 
+ * @author Eric
+ *
+ * @param <T>
+ */
 public class Node<T> {
 
 	private Node<T> nextNode = null;
