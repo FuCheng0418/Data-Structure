@@ -1,12 +1,39 @@
 package com.xxfc.queue;
 
+/**
+ * 用陣列實現Queue
+ * 
+ * @author Eric
+ *
+ */
 public class ArrayQueue {
+
+	/**
+	 * 最前的index
+	 */
 	int front;
+
+	/**
+	 * 最後的index
+	 */
 	int rear;
+
+	/**
+	 * Queue是否為空
+	 */
 	boolean isEmpty;
 
+	/**
+	 * 存放Queue的陣列
+	 */
 	String[] array;
 
+	/**
+	 * 建構子，須設定Queue的大小
+	 * 
+	 * @param size
+	 *            設定Queue的大小
+	 */
 	public ArrayQueue(int size) {
 		array = new String[size];
 		front = 0;
@@ -14,6 +41,12 @@ public class ArrayQueue {
 		isEmpty = true;
 	}
 
+	/**
+	 * 加入新的字串到Queue
+	 * 
+	 * @param string
+	 * @return
+	 */
 	public boolean enqueue(String string) {
 		// int newRear = (rear + 1) % array.length;
 		System.out.println("new rear index:" + rear);
@@ -27,6 +60,11 @@ public class ArrayQueue {
 		}
 	}
 
+	/**
+	 * 自Queue取出並移除字串
+	 * 
+	 * @return
+	 */
 	public String dequeue() {
 		String result = null;
 		if (front < rear || (front == rear && !isEmpty)) {
